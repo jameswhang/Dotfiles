@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/jameswhang/.oh-my-zsh
+export GOPATH=/Users/jameswhang/go-workspace/
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +54,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin/:/usr/local/mysql/bin:/usr/local/go/bin/:/opt/local/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -92,7 +93,11 @@ alias gpsh="git push"
 alias cdh="cd ~"
 alias pj="cd ~/Documents/projects"
 alias school="cd ~/Documents/school"
+alias htdocs="cd /Applications/MAMP/htdocs/httpdocs"
 alias c="clear"
+
+# BECAUSE FUCK MV
+alias mv="cp"
 
 # Servers
 alias vtest="ssh root@v-test-r415-2.cs.northwestern.edu"
@@ -101,6 +106,16 @@ alias mammoth="ssh syw973@mammoth.cs.northwestern.edu"
 alias murphy="ssh syw973@murphy.wot.eecs.northwestern.edu"
 alias hanlon="ssh syw973@hanlon.wot.eecs.northwestern.edu"
 
+# Rails
+alias rstart="rake assets:precompile && rails s"
 
 
 
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$PATH:/Users/jameswhang/chromium/depot_tools
+
+
+export NVM_DIR="/Users/jameswhang/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
