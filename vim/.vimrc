@@ -27,6 +27,16 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'user/L9', {'name': 'newL9'}
 Plugin 'fatih/vim-go'
 
+Plugin 'The-NERD-Tree'
+
+"Plugin 'klen/python-mode'
+Plugin 'pangloss/vim-javascript'
+Plugin 'rust-lang/rust.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-surround'
+
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -44,4 +54,14 @@ filetype plugin indent on    " required
 set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+syntax enable
+
 :set nu
+
+:set smartindent
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
+:set softtabstop=4
+
+au BufNewFile,BufRead *.ejs set filetype=html
